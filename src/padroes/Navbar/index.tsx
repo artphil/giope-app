@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useUsuarioLogado } from "../../estados/hooks/usuario";
 
 function Navbar() {
-const [mostraMenu, setMostraMenu] = useState(false);
-function toggleMenu(){
-	setMostraMenu(!mostraMenu)
-}
+	const [mostraMenu, setMostraMenu] = useState(false);
+	const usuario = useUsuarioLogado();
+	function toggleMenu() {
+		setMostraMenu(!mostraMenu)
+	}
 	return (
 		<section>
 			<nav>
@@ -14,16 +16,22 @@ function toggleMenu(){
 				>
 					Menu
 				</button>
-				<button>Login</button>
+				<h1>{usuario?.nome}</h1>
+				{!usuario &&
+					<button>Entrar</button>
+				}
+				{usuario &&
+					<button>Sair</button>
+				}
 			</nav>
-			{mostraMenu && 
-			<div>
-				<ul>
-					<li>
-						item menu
-					</li>
-				</ul>
-			</div>}
+			{mostraMenu &&
+				<div>
+					<ul>
+						<li>
+							item menu
+						</li>
+					</ul>
+				</div>}
 		</section>
 	);
 }
