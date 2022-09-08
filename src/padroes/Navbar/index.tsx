@@ -1,9 +1,31 @@
+import { useState } from "react";
+
 function Navbar() {
-	return ( 
-		<nav>
-			<button>Login</button>
-		</nav>
-	 );
+const [mostraMenu, setMostraMenu] = useState(false);
+function toggleMenu(){
+	setMostraMenu(!mostraMenu)
+}
+	return (
+		<section>
+			<nav>
+				<button
+					title="Menu"
+					onClick={toggleMenu}
+				>
+					Menu
+				</button>
+				<button>Login</button>
+			</nav>
+			{mostraMenu && 
+			<div>
+				<ul>
+					<li>
+						item menu
+					</li>
+				</ul>
+			</div>}
+		</section>
+	);
 }
 
 export default Navbar;
