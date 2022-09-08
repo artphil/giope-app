@@ -13,7 +13,7 @@ npx create-next-app@latest --typescript
 ### Testes
 Instalando Jest para criação de testes
 ```bash
-npm install --save-dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom
+npm install --save-dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom @types/jest
 ```
 Criar o arquivo `jest.config.js` na pasta raiz do projeto
 ```ts
