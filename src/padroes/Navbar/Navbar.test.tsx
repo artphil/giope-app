@@ -16,7 +16,7 @@ describe('Navbar', () => {
 
 	})
 	describe('sem usuário', () => {
-		test('mostra botão \'Login\'', () => {
+		test('mostrar botão \'Login\'', () => {
 			render(<Navbar/>)
 			const botaoLogin = screen.getByText('Login')
 			expect(botaoLogin).toBeInTheDocument()
