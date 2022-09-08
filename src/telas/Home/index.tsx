@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../../padroes/Footer";
 import Navbar from "../../padroes/Navbar";
 
 function Home() {
@@ -10,11 +11,52 @@ function Home() {
 				<h1>
 					Home Page
 				</h1>
+				<h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1><h1>
+					Home Page
+				</h1>
 			</main>
 
-			<footer>
-				Rodape
-			</footer></>
+		
+			<Footer />
+		</>
 	);
 }
 
