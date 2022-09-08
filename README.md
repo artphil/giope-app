@@ -6,12 +6,13 @@ Ferramentas de auxilio a gestão do metroBH
 
 ## Instalação
 ### Básico
+Iniciando aplicação [React](https://pt-br.reactjs.org/docs/getting-started.html) com [Next](https://nextjs.org/docs/getting-started) e [Typescript](https://www.typescriptlang.org/)
 Criando a aplicação Next com Typescript
 ```bash
 npx create-next-app@latest --typescript
 ```
 ### Testes
-Instalando Jest para criação de testes
+Instalando [Jest](https://jestjs.io/pt-BR/docs/getting-started) usando [Next/Jest](https://nextjs.org/docs/testing) para criação de testes
 ```bash
 npm install --save-dev jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom @types/jest
 ```
@@ -42,6 +43,12 @@ Criar o arquivo `jest.setup.js` na pasta raiz do projeto
 ```js
 //jest.setup.js
 import '@testing-library/jest-dom/extend-expect';
+```
+
+### Estados
+Instalando [Recoil](https://recoiljs.org/docs/introduction/getting-started) para gerenciamento de estados
+````bash
+npm install recoil
 ```
 
 ## Desenvolvimento
