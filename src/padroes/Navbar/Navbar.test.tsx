@@ -54,7 +54,7 @@ describe('Navbar', () => {
 			(useUsuarioLogado as jest.Mock).mockReturnValue({ nome: 'Usuario' })
 		})
 
-		test('mostrar botão \'Entrar\'', () => {
+		test('não mostrar botão \'Entrar\'', () => {
 			render(<NavbarTest />)
 			const botaoLogin = screen.queryByText('Entrar')
 			expect(botaoLogin).not.toBeInTheDocument()

@@ -1,57 +1,17 @@
-import Footer from "../../padroes/Footer";
-import Navbar from "../../padroes/Navbar";
+import { useUsuarioLogado } from "../../estados/hooks/usuario";
+import FormLogin from "../../padroes/FormLogin";
 import TelaBase from "../TelaBase";
+import estilos from './Home.module.css'
 
 function Home() {
+	const usuario = useUsuarioLogado();
 	return (
 		<TelaBase>
-
-			<div>
-				<h1>
-					Home Page 1
-				</h1>
-				<h1>
-					Home Page 2
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page
-				</h1><h1>
-					Home Page 99
-				</h1>
+			{!usuario && 
+			<div className={estilos.login}>
+			<FormLogin/>
 			</div>
+			}
 		</TelaBase>
 	);
 }
