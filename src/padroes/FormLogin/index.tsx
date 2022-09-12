@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Botao from "../../componentes/Botao";
+import InputTexto from "../../componentes/InputTexto";
 
 function FormLogin() {
 	const [usuario, setUsuario] = useState('')
@@ -9,21 +11,20 @@ function FormLogin() {
 	}
 	return ( 
 		<form>
-			<input 
+			<InputTexto 
 			name="usuario" 
-			type="text" 
 			placeholder="Usuário"
 			onChange={(e)=>{setUsuario(e.target.value)}}
 			/>
-			<input 
-			name="senha" 
+			<InputTexto 
+			senha 
 			type="password"
 			placeholder="Senha"
 			onChange={(e)=>{setSenha(e.target.value)}}
 			/>
-			<button
+			<Botao
 			disabled={camposInvalidos()}
-			>Enviar</button>
+			>Enviar</Botao>
 		</form>
 	 );
 }

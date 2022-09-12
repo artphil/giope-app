@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Botao from "../../componentes/Botao";
 import { useUsuarioLogado } from "../../estados/hooks/usuario";
 
 import estilos from './Navbar.module.css'
@@ -14,12 +15,12 @@ function Navbar() {
 			<nav className={estilos.navbarContent}>
 
 				<div className={estilos.navbarBotao}>
-					<button
+					<Botao
 						title="Menu"
 						onClick={toggleMenu}
 					>
 						Menu
-					</button>
+					</Botao>
 				</div>
 
 				<div className={estilos.navbarTitulo}>
@@ -30,10 +31,10 @@ function Navbar() {
 
 				<div className={estilos.navbarBotao}>
 					{!usuario &&
-						<button>Entrar</button>
+						<Botao>Entrar</Botao>
 					}
 					{usuario &&
-						<button>Sair</button>
+						<Botao>Sair</Botao>
 					}
 				</div>
 			</nav>
