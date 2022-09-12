@@ -1,14 +1,21 @@
+import { useRouter } from "next/router";
 import { useState } from "react";
 import Botao from "../../componentes/Botao";
 import { useUsuarioLogado } from "../../estados/hooks/usuario";
+import { autenticacao } from "../../util/autenticacao";
 
 import estilos from './Navbar.module.css'
 
 function Navbar() {
 	const [mostraMenu, setMostraMenu] = useState(false);
 	const usuario = useUsuarioLogado();
+	const route = useRouter()
 	function toggleMenu() {
 		setMostraMenu(!mostraMenu)
+	}
+	function sair(){
+		autenticacao.logout()
+		route.reload()
 	}
 	return (
 		<div className={estilos.navbar}>
@@ -34,7 +41,9 @@ function Navbar() {
 						<Botao>Entrar</Botao>
 					}
 					{usuario &&
-						<Botao>Sair</Botao>
+						<Botao
+						onClick={sair}
+						>Sair</Botao>
 					}
 				</div>
 			</nav>

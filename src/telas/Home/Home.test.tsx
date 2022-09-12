@@ -14,7 +14,8 @@ function HomeTest() {
 
 jest.mock('../../estados/hooks/usuario', () => {
 	return {
-		useUsuarioLogado: jest.fn()
+		useUsuarioLogado: jest.fn(),
+		useSetUsuario: () => jest.fn(),
 	}
 })
 
