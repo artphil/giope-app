@@ -6,10 +6,16 @@ Ferramentas de auxilio a gestão do metroBH
 
 ## Instalação
 ### Básico
-Iniciando aplicação [React](https://pt-br.reactjs.org/docs/getting-started.html) com [Next](https://nextjs.org/docs/getting-started) e [Typescript](https://www.typescriptlang.org/)
+Iniciando aplicação [React](https://pt-br.reactjs.org) com [Next](https://nextjs.org) e [Typescript](https://www.typescriptlang.org/)
 Criando a aplicação Next com Typescript
 ```bash
 npx create-next-app@latest --typescript
+```
+
+### Interface
+[Bootstrap](https://react-bootstrap.github.io/)
+```bash
+npm install react-bootstrap bootstrap
 ```
 ### Testes
 Instalando [Jest](https://jestjs.io/pt-BR/docs/getting-started) usando [Next/Jest](https://nextjs.org/docs/testing) para criação de testes
